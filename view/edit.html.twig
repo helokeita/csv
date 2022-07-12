@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+      <h1>{{ message }}</h1>
+
+      <form action="edit_comp.php">
+
+      <label>商品ID</label>
+      <input type="text" name="id" value={{ csvArray[0] }}><br>
+      <label>商品名</label>
+      <input type="text" name="name" value={{ csvArray[1] }}><br>
+      <label>金額</label>
+      <input type="text" name="price" value={{ csvArray[2] }}><br>
+      <label>在庫数</label>       
+      <input type="text" name="stock" value={{ csvArray[3] }}><br><br>
+      <input type="submit" value="更新">
+      </form>
+      <br>
+      <input type="button" onclick="location.href='index.php'"value="戻る">
+
+  </body>
+</html>

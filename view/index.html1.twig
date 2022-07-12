@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+      <h1>{{ message }}</h1>
+
+      <table border="1">
+           <tr>
+             <th>商品ID</th>
+             <th>商品名</th>
+             <th>金額</th>
+             <th>在庫数</th>
+           </tr>
+
+           {% for data in csvArray %}
+           <tr>
+              <td>{{ data.商品ID }}</td>
+              <td>{{ data.商品名 }}</td>
+              <td>{{ data.金額 }}</td>
+              <td>{{ data.在庫 }}</td>
+           </tr>
+           {% endfor %}
+      </table>
+      <input type="button" onclick="location.href='add.php'"value="新規登録">
+
+  </body>
+</html>
+
+<input type="button" onclick="location.href='edit.php?id={{ data.商品ID }}'"value="編集">
+              <input type="button" onclick="location.href='delete.php?id={{ data.商品ID }}'"value="削除">
+          
